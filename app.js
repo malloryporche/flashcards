@@ -54,8 +54,7 @@ app.get('/hello', (req, res) => {
   res.render('hello', {});
 });
 app.post('/hello', (req, res) => {
-  res.render('hello', {});
-  console.log(res)
+  res.render('hello', { name: req.body.username });
 });
 
 app.listen(3000, () => {
