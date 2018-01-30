@@ -1,0 +1,11 @@
+extends layout.pug
+
+block content
+      if friends
+        table
+          each friend in friends
+            tr
+              td= friend.firstName
+              td= friend.lastName
+      else
+        h1 Uh oh, looks like you have no friends!
