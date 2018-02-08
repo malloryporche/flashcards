@@ -99,6 +99,7 @@ input {
   font-size: 1em;
   font-weight: 400;
   width: 50%;
+  display: inline-block;
 }
 
 .namecard-form {
@@ -143,6 +144,8 @@ input {
 .namecard-exit {
   width: 50%;
   text-align: right;
+  display: inline-block;
+  margin: 1em 0;
 }
 
 .namecard-exit button {

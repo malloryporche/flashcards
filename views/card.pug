@@ -1,11 +1,17 @@
-extends layout.pug
+extends app
 
-block main
-  section#content
-    h2= text
-      if hint
-        p
-          i Hint: #{hint}
-    a(href=`${id}?side=${sideToShow}`)= sideToShowDisplay
-    br
-    a(href='/cards') Next card
+block card
+  section.flashcards
+    .card(class=`card-${sideToShow}`)
+      .card-header
+      h1.card-title= side
+      #content
+        h2= text
+        p.hint
+          i Hint: It starts with an "s"
+      .card-flip-wrap
+        a(href=`${id}?side=${sideToShow}`)
+          img.card-flip(src='../img/flip.svg')
+      .card-next
+        a(href='/cards')
+          img(src='../img/next.svg')

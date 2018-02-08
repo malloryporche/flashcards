@@ -5,8 +5,5 @@ html(lang='en')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     include includes/header.pug
-    if name
-      h2 Welcome, #{name}!
-      form(action='/goodbye', method='post')
-        button(type='submit') Logout
+    
     block main

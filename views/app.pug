@@ -7,8 +7,6 @@ block main
         p.namecard-greeting Welcome, #{name}!
           form.namecard-exit(action='/goodbye', method='POST')
             button(type='submit')
-              img(src='img/close.svg')
-      else
-        p.namecard-greeting Hello, student!
+              img(src='../img/close.svg')
     block intro
   block card
