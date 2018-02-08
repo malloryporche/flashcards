@@ -10,9 +10,11 @@ app.use(cookieParser());
 
 app.set('view engine','pug');
 
-const routes = require('./routes');
+const mainRoutes = require('./routes');
+const cardRoutes = require('./routes/cards');
 
-app.use(routes);
+app.use(mainRoutes);
+app.use('/cards', cardRoutes);
 
 app.use((req, res, next) => {
   const err = new Error('Not Found');
@@ -21,7 +23,7 @@ app.use((req, res, next) => {
 });
 app.use((err, req, res, next) => {
   res.locals.error = err;
-  res.status(err.status);
+  // res.status(err.status);
   res.render('error');
 });
 

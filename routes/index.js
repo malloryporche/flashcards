@@ -38,11 +38,6 @@ router.get('/', (req, res) => {
   }
 });
 
-router.get('/cards', (req, res) => {
-  res.render('card', {prompt: "Who is buried in Grant's tomb?", hint:
- "Think about who's tomb it is", colors});
-});
-
 router.get('/sandbox', (req, res) => {
   res.render('sandbox', {friends});
 });
