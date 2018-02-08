@@ -25,10 +25,10 @@ router.get('/:id', (req, res) => {
   if (side === 'question' ) {
     templateData.hint = hint;
     templateData.sideToShow = 'answer';
-    templateData.sideToShowDisplay = 'Answer';
+    templateData.sideToShowDisplay = 'question';
   } else if (side === 'answer') {
     templateData.sideToShow = 'question';
-    templateData.sideToShowDisplay = 'Question';
+    templateData.sideToShowDisplay = 'answer';
   }
 
   res.render('card', templateData);
